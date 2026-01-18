@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support - Touchline Studio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #1a365d;
+            --primary-light: #2c5282;
+            --accent: #38a169;
+            --bg: #f7fafc;
+            --text: #1a202c;
+            --text-muted: #718096;
+            --card-bg: #ffffff;
+            --border: #e2e8f0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        header {
+            background: var(--primary);
+            color: white;
+            padding: 16px 0;
+        }
+
+        header .container {
+            max-width: 1200px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            text-decoration: none;
+            color: white;
+        }
+
+        nav a {
+            color: rgba(255,255,255,0.9);
+            text-decoration: none;
+            margin-left: 32px;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        nav a:hover {
+            color: white;
+        }
+
+        .page-header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .page-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 8px;
+        }
+
+        .page-header p {
+            opacity: 0.9;
+        }
+
+        main {
+            padding: 60px 0;
+        }
+
+        .support-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+            margin-bottom: 48px;
+        }
+
+        .support-card {
+            background: var(--card-bg);
+            border-radius: 16px;
+            padding: 32px;
+            border: 1px solid var(--border);
+            text-align: center;
+        }
+
+        .support-icon {
+            width: 64px;
+            height: 64px;
+            background: var(--primary);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 28px;
+        }
+
+        .support-card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 12px;
+        }
+
+        .support-card p {
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
+
+        .support-card a {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: background 0.2s;
+        }
+
+        .support-card a:hover {
+            background: var(--primary-light);
+        }
+
+        .faq {
+            background: var(--card-bg);
+            border-radius: 16px;
+            padding: 48px;
+            border: 1px solid var(--border);
+        }
+
+        .faq h2 {
+            font-size: 1.75rem;
+            margin-bottom: 32px;
+            text-align: center;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid var(--border);
+            padding: 24px 0;
+        }
+
+        .faq-item:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        .faq-item:first-of-type {
+            padding-top: 0;
+        }
+
+        .faq-question {
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin-bottom: 12px;
+            color: var(--primary);
+        }
+
+        .faq-answer {
+            color: var(--text-muted);
+        }
+
+        footer {
+            background: var(--text);
+            color: rgba(255,255,255,0.7);
+            padding: 40px 0;
+        }
+
+        footer .container {
+            max-width: 1200px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        footer a {
+            color: rgba(255,255,255,0.7);
+            text-decoration: none;
+            margin-left: 24px;
+            transition: color 0.2s;
+        }
+
+        footer a:hover {
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            .faq {
+                padding: 32px 24px;
+            }
+
+            header .container {
+                flex-direction: column;
+                gap: 16px;
+            }
+
+            nav a {
+                margin: 0 16px;
+            }
+
+            footer .container {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            footer a {
+                margin: 0 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="/" class="logo">Touchline Studio</a>
+            <nav>
+                <a href="index.html#features">Features</a>
+                <a href="support.html">Support</a>
+                <a href="privacy.html">Privacy</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>Support</h1>
+            <p>We're here to help you get the most out of Touchline Studio</p>
+        </div>
+    </section>
+
+    <main>
+        <div class="container">
+            <div class="support-grid">
+                <div class="support-card">
+                    <div class="support-icon">📧</div>
+                    <h3>Email Support</h3>
+                    <p>Have a question, feature request, or found a bug? We'd love to hear from you.</p>
+                    <a href="mailto:touchlinestudio@umangdesai.com">Contact Us</a>
+                </div>
+                
+                <div class="support-card">
+                    <div class="support-icon">⭐</div>
+                    <h3>Rate the App</h3>
+                    <p>Enjoying Touchline Studio? A review on the App Store helps other coaches discover it.</p>
+                    <a href="https://apps.apple.com/app/touchline-studio/id6740043775?action=write-review">Leave a Review</a>
+                </div>
+            </div>
+
+            <div class="faq">
+                <h2>Frequently Asked Questions</h2>
+                
+                <div class="faq-item">
+                    <div class="faq-question">How do I sync my data across devices?</div>
+                    <div class="faq-answer">Touchline Studio uses iCloud to sync your data. Make sure you're signed into the same Apple ID on all devices and that iCloud is enabled for Touchline Studio in Settings > [Your Name] > iCloud > Apps Using iCloud.</div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">How do I import my roster?</div>
+                    <div class="faq-answer">Go to your season's Roster tab and tap the import button. You can import from CSV or Excel files. The app will show you a preview and let you map columns before importing. Make sure your file has columns for player names, and optionally jersey numbers and positions.</div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">How does the AI Drill Creator work?</div>
+                    <div class="faq-answer">The AI Drill Creator uses OpenRouter to generate drill suggestions based on your parameters (goal, duration, skill level, equipment, etc.). You'll need to provide your own OpenRouter API key in Settings. The feature is optional—the app works fully without it.</div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Can I use the app offline?</div>
+                    <div class="faq-answer">Yes! All core features work offline. Your data is stored locally on your device. iCloud sync happens automatically when you're back online. The only feature requiring internet is the AI Drill Creator.</div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">How do I take notes during a session?</div>
+                    <div class="faq-answer">Open your session and tap "Run Session" to enter live mode. You'll see your players listed—tap any player to add a note. You can type or use the microphone for voice dictation. Notes are automatically linked to the session and player.</div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Can I share drills with other coaches?</div>
+                    <div class="faq-answer">Currently, drills are stored in your personal library. Export/sharing features are on our roadmap. In the meantime, you can describe your drills to other coaches or take screenshots of the drill details and diagrams.</div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">How do I delete my data?</div>
+                    <div class="faq-answer">You can delete individual items (teams, seasons, drills, etc.) within the app. To delete all data, you can delete the app from your device. If you use iCloud sync, also go to Settings > [Your Name] > iCloud > Manage Storage > Touchline Studio to remove cloud data.</div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Is there a Mac version?</div>
+                    <div class="faq-answer">Yes! Touchline Studio is available on Mac through the Mac App Store. Your data syncs seamlessly between your iPhone, iPad, and Mac via iCloud.</div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <span>&copy; 2026 Umang Desai. All rights reserved.</span>
+            <div>
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="support.html">Support</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

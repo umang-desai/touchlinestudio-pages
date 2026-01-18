@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Touchline Studio - Soccer Session & Season Planner</title>
+    <meta name="description" content="Plan smarter soccer sessions with a reusable drill library, AI-powered drill creation, and animated tactical diagrams. Track every player throughout the season.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #1a365d;
+            --primary-light: #2c5282;
+            --accent: #38a169;
+            --bg: #f7fafc;
+            --text: #1a202c;
+            --text-muted: #718096;
+            --card-bg: #ffffff;
+            --border: #e2e8f0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Header */
+        header {
+            background: var(--primary);
+            color: white;
+            padding: 16px 0;
+        }
+
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            text-decoration: none;
+            color: white;
+        }
+
+        nav a {
+            color: rgba(255,255,255,0.9);
+            text-decoration: none;
+            margin-left: 32px;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        nav a:hover {
+            color: white;
+        }
+
+        /* Hero */
+        .hero {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            color: white;
+            padding: 80px 0 100px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 24px;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto 40px;
+        }
+
+        .app-store-badge {
+            display: inline-block;
+        }
+
+        .app-store-badge img {
+            height: 54px;
+        }
+
+        /* Features */
+        .features {
+            padding: 80px 0;
+        }
+
+        .features h2 {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 16px;
+        }
+
+        .features > .container > p {
+            text-align: center;
+            color: var(--text-muted);
+            margin-bottom: 60px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 32px;
+        }
+
+        .feature-card {
+            background: var(--card-bg);
+            border-radius: 16px;
+            padding: 32px;
+            border: 1px solid var(--border);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 40px rgba(0,0,0,0.08);
+        }
+
+        .feature-icon {
+            width: 48px;
+            height: 48px;
+            background: var(--primary);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+
+        .feature-card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 12px;
+        }
+
+        .feature-card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        /* Highlights */
+        .highlights {
+            background: var(--card-bg);
+            padding: 80px 0;
+        }
+
+        .highlight-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            margin-bottom: 80px;
+        }
+
+        .highlight-row:last-child {
+            margin-bottom: 0;
+        }
+
+        .highlight-row.reverse {
+            direction: rtl;
+        }
+
+        .highlight-row.reverse > * {
+            direction: ltr;
+        }
+
+        .highlight-content h3 {
+            font-size: 1.75rem;
+            margin-bottom: 16px;
+        }
+
+        .highlight-content p {
+            color: var(--text-muted);
+            margin-bottom: 24px;
+        }
+
+        .highlight-content ul {
+            list-style: none;
+        }
+
+        .highlight-content li {
+            padding: 8px 0;
+            padding-left: 28px;
+            position: relative;
+            color: var(--text-muted);
+        }
+
+        .highlight-content li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-weight: 600;
+        }
+
+        .highlight-visual {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            border-radius: 16px;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+        }
+
+        /* CTA */
+        .cta {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .cta h2 {
+            font-size: 2rem;
+            margin-bottom: 16px;
+        }
+
+        .cta p {
+            opacity: 0.9;
+            margin-bottom: 32px;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--text);
+            color: rgba(255,255,255,0.7);
+            padding: 40px 0;
+        }
+
+        footer .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        footer a {
+            color: rgba(255,255,255,0.7);
+            text-decoration: none;
+            margin-left: 24px;
+            transition: color 0.2s;
+        }
+
+        footer a:hover {
+            color: white;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .highlight-row {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+
+            .highlight-row.reverse {
+                direction: ltr;
+            }
+
+            header .container {
+                flex-direction: column;
+                gap: 16px;
+            }
+
+            nav a {
+                margin: 0 16px;
+            }
+
+            footer .container {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            footer a {
+                margin: 0 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="/" class="logo">Touchline Studio</a>
+            <nav>
+                <a href="#features">Features</a>
+                <a href="support.html">Support</a>
+                <a href="privacy.html">Privacy</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Plan Smarter Sessions.<br>Develop Better Players.</h1>
+            <p>The complete training companion for soccer coaches. Build your drill library, plan sessions with AI, and track every player throughout the season.</p>
+            <a href="https://apps.apple.com/app/touchline-studio/id6740043775" class="app-store-badge">
+                <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store">
+            </a>
+        </div>
+    </section>
+
+    <section class="features" id="features">
+        <div class="container">
+            <h2>Everything You Need to Coach</h2>
+            <p>From season planning to live session tools, Touchline Studio helps you focus on what matters most—developing your players.</p>
+            
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">📋</div>
+                    <h3>Season Planner</h3>
+                    <p>Organize your entire season with week, month, and season views. Break training into focused segments and track intensity across your program.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">⚽</div>
+                    <h3>Drill Library</h3>
+                    <p>Build a reusable collection of drills with tags, equipment lists, and coaching points. Search and filter to find exactly what you need.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🤖</div>
+                    <h3>AI Drill Creator</h3>
+                    <p>Describe what you want to work on and let AI generate complete drills with setup instructions, progressions, and coaching cues.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🎬</div>
+                    <h3>Animated Diagrams</h3>
+                    <p>Watch player movements and passing patterns play out in real-time. Scrub through animations to highlight key moments.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">📝</div>
+                    <h3>Player Notes</h3>
+                    <p>Capture observations during training using text or voice. Notes are linked to players and sessions, building a development record over time.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">☁️</div>
+                    <h3>iCloud Sync</h3>
+                    <p>Plan on your Mac, run sessions from your iPhone or iPad. Your data syncs privately across all your devices.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="highlights">
+        <div class="container">
+            <div class="highlight-row">
+                <div class="highlight-content">
+                    <h3>From First Whistle to Final Match</h3>
+                    <p>Touchline Studio covers your entire coaching workflow, from preseason planning to match day preparation.</p>
+                    <ul>
+                        <li>Create teams and manage multiple seasons</li>
+                        <li>Import rosters from CSV or Excel files</li>
+                        <li>Schedule matches alongside training sessions</li>
+                        <li>Track player attendance and development</li>
+                    </ul>
+                </div>
+                <div class="highlight-visual">📅</div>
+            </div>
+            
+            <div class="highlight-row reverse">
+                <div class="highlight-content">
+                    <h3>Run Sessions Like a Pro</h3>
+                    <p>Live session tools help you stay organized on the pitch while capturing valuable player insights.</p>
+                    <ul>
+                        <li>Clear drill timeline with durations</li>
+                        <li>Voice dictation for hands-free note-taking</li>
+                        <li>Water break reminders and coaching tools</li>
+                        <li>Quick access to drill diagrams and instructions</li>
+                    </ul>
+                </div>
+                <div class="highlight-visual">🏃</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta">
+        <div class="container">
+            <h2>Ready to Level Up Your Coaching?</h2>
+            <p>Download Touchline Studio and start planning better training sessions today.</p>
+            <a href="https://apps.apple.com/app/touchline-studio/id6740043775" class="app-store-badge">
+                <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store">
+            </a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <span>&copy; 2026 Umang Desai. All rights reserved.</span>
+            <div>
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="support.html">Support</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
