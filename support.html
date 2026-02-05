@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Support — Touchline Studio</title>
     <meta name="description" content="Get help with Touchline Studio: iCloud sync, roster import, AI drill creator setup, offline use, and common questions.">
-    <meta name="theme-color" content="#070b14">
+    <meta name="theme-color" content="#f4f8fc">
 
     <meta property="og:title" content="Support — Touchline Studio">
     <meta property="og:description" content="Help, troubleshooting, and FAQs for Touchline Studio.">
@@ -18,107 +18,195 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;family=Space+Grotesk:wght@500;700&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/site.css">
+    <script defer src="assets/site.js"></script>
 </head>
 <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
     <header class="site-header">
         <div class="container">
             <a href="index.html" class="brand">
                 <img src="assets/icons/app-icon.png" alt="Touchline Studio app icon">
                 <span>Touchline Studio</span>
             </a>
-            <nav class="nav" aria-label="Primary">
-                <a href="index.html#screenshots">Screenshots</a>
-                <a href="index.html#features">Features</a>
-                <a href="privacy.html">Privacy</a>
-                <a href="support.html">Support</a>
-                <a class="cta-link" href="https://apps.apple.com/app/touchline-studio/id6740043775">Download</a>
+
+            <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="primary-nav">
+                <span class="sr-only">Toggle navigation menu</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M3 6h18"></path>
+                    <path d="M3 12h18"></path>
+                    <path d="M3 18h18"></path>
+                </svg>
+            </button>
+
+            <nav class="nav" id="primary-nav" aria-label="Primary">
+                <a href="index.html#screenshots" data-track="nav_screenshots">Screenshots</a>
+                <a href="index.html#features" data-track="nav_features">Features</a>
+                <a href="index.html#reviews" data-track="nav_reviews">Reviews</a>
+                <a href="privacy.html" data-track="nav_privacy">Privacy</a>
+                <a href="support.html" data-track="nav_support">Support</a>
+                <a class="cta-link" href="https://apps.apple.com/app/touchline-studio/id6757970508" data-track="nav_download">Download</a>
             </nav>
         </div>
     </header>
 
-    <main>
+    <main id="main-content">
         <section class="page-hero">
             <div class="container">
                 <h1>Support</h1>
-                <p>We’re here to help you get the most out of Touchline Studio.</p>
+                <p>Quick answers, setup help, and direct contact when you need it.</p>
             </div>
         </section>
 
-        <section class="section" style="padding-top: 0;">
+        <section class="section section-tight">
             <div class="container">
-                <div class="grid cols-2">
-                    <div class="card">
-                        <div class="icon">📧</div>
+                <div class="support-grid">
+                    <article class="card">
+                        <div class="icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v14H4z"></path><path d="M4 7l8 6 8-6"></path></svg>
+                        </div>
                         <h3>Email support</h3>
-                        <p>Have a question, feature request, or found a bug? We’d love to hear from you.</p>
-                        <p style="margin-top: 12px;">
-                            <a class="button" href="mailto:touchlinestudio@umangdesai.com">Contact support</a>
-                        </p>
-                    </div>
-                    <div class="card">
-                        <div class="icon">⭐</div>
+                        <p>Questions, bug reports, and feature requests go directly to the team.</p>
+                        <p class="mt-12"><a class="button" href="mailto:touchlinestudio@umangdesai.com" data-track="support_email">Contact support</a></p>
+                    </article>
+
+                    <article class="card">
+                        <div class="icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.5l2.9 5.8 6.4.9-4.6 4.5 1.1 6.3-5.8-3.1-5.8 3.1 1.1-6.3L2.7 9.2l6.4-.9L12 2.5z"></path></svg>
+                        </div>
                         <h3>Rate the app</h3>
-                        <p>Enjoying Touchline Studio? A review helps other coaches discover it.</p>
-                        <p style="margin-top: 12px;">
-                            <a class="button" href="https://apps.apple.com/app/touchline-studio/id6740043775?action=write-review">Leave a review</a>
-                        </p>
-                    </div>
+                        <p>If Touchline Studio helps your week run smoother, a review helps other coaches find it.</p>
+                        <p class="mt-12"><a class="button" href="https://apps.apple.com/app/touchline-studio/id6757970508?action=write-review" data-track="support_write_review">Leave a review</a></p>
+                    </article>
                 </div>
             </div>
         </section>
 
-        <section class="section">
+        <section class="section" aria-labelledby="email-builder-heading">
             <div class="container">
                 <div class="section-header">
                     <div>
-                        <h2>Frequently asked questions</h2>
-                        <p>Quick troubleshooting and setup tips.</p>
+                        <h2 id="email-builder-heading">Compose a support email</h2>
+                        <p>This creates a prefilled email in your mail app so you can send complete issue details faster.</p>
                     </div>
                 </div>
 
-                <div class="faq">
+                <div class="card">
+                    <form class="support-form" data-support-form>
+                        <div class="support-form-grid">
+                            <div>
+                                <label class="input-label" for="topic">Topic</label>
+                                <select class="select" id="topic" name="topic" required>
+                                    <option value="iCloud Sync">iCloud Sync</option>
+                                    <option value="Roster Import">Roster Import</option>
+                                    <option value="AI Drill Creator">AI Drill Creator</option>
+                                    <option value="Billing / App Store">Billing / App Store</option>
+                                    <option value="Feature Request">Feature Request</option>
+                                    <option value="Bug Report">Bug Report</option>
+                                    <option value="General Question">General Question</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label class="input-label" for="urgency">Urgency</label>
+                                <select class="select" id="urgency" name="urgency" required>
+                                    <option value="Normal">Normal</option>
+                                    <option value="High">High</option>
+                                    <option value="Low">Low</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="input-label" for="device">Device / OS</label>
+                            <input class="input" id="device" name="device" type="text" placeholder="Example: iPhone 15, iOS 26.0">
+                        </div>
+
+                        <div>
+                            <label class="input-label" for="message">Details</label>
+                            <textarea class="textarea" id="message" name="message" placeholder="What happened, and what did you expect? Include steps to reproduce if possible." required></textarea>
+                        </div>
+
+                        <div>
+                            <button class="button" type="submit" data-track="support_open_draft">Open draft email</button>
+                        </div>
+                        <p class="helper">This does not send automatically. You can edit before sending.</p>
+                    </form>
+
+                    <div class="callout">
+                        <p>Tip: for bug reports, include screenshots and the exact screen name where the issue occurred.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" aria-labelledby="faq-heading">
+            <div class="container">
+                <div class="section-header">
+                    <div>
+                        <h2 id="faq-heading">Frequently asked questions</h2>
+                        <p>Search setup and troubleshooting answers.</p>
+                    </div>
+                </div>
+
+                <div class="faq-toolbar">
+                    <label class="faq-label" for="support-faq-search">Search support FAQs</label>
+                    <input
+                        class="faq-search"
+                        id="support-faq-search"
+                        type="search"
+                        placeholder="Try: sync, offline, import, AI"
+                        data-faq-filter
+                        data-faq-target="#support-faq-list"
+                        data-faq-empty="#support-faq-empty"
+                    >
+                </div>
+
+                <div class="faq" id="support-faq-list">
                     <details>
                         <summary>How do I sync my data across devices?</summary>
-                        <p>Touchline Studio uses iCloud to sync your data. Make sure you're signed into the same Apple ID on all devices and that iCloud is enabled for Touchline Studio in Settings → your Apple ID → iCloud → Apps Using iCloud.</p>
+                        <p>Sign into the same Apple ID on all devices and enable iCloud for Touchline Studio in Settings → your Apple ID → iCloud → Apps Using iCloud.</p>
                     </details>
 
                     <details>
                         <summary>How do I import my roster?</summary>
-                        <p>Go to your season's Roster tab and tap the import button. You can import from CSV or Excel files. The app will show you a preview and let you map columns before importing. Make sure your file has columns for player names, and optionally jersey numbers and positions.</p>
+                        <p>Open your season roster and use Import. CSV and Excel are supported, with a preview and column mapping step before save.</p>
                     </details>
 
                     <details>
                         <summary>How does the AI Drill Creator work?</summary>
-                        <p>The AI Drill Creator uses OpenRouter to generate drill suggestions based on your parameters (goal, duration, skill level, equipment, etc.). You'll need to provide your own OpenRouter API key in Settings. The feature is optional—the app works fully without it.</p>
+                        <p>It uses OpenRouter and needs your own API key. The app can be used fully without enabling this feature.</p>
                     </details>
 
                     <details>
                         <summary>Can I use the app offline?</summary>
-                        <p>Yes. All core features work offline. Your data is stored locally on your device. iCloud sync happens automatically when you're back online. The only feature requiring internet is the AI Drill Creator.</p>
+                        <p>Yes. Core planning and session features work offline. Internet is only required for AI drill generation.</p>
                     </details>
 
                     <details>
                         <summary>How do I take notes during a session?</summary>
-                        <p>Open your session and tap “Run Session” to enter live mode. You’ll see your players listed—tap any player to add a note. You can type or use the microphone for voice dictation. Notes are automatically linked to the session and player.</p>
+                        <p>Open a session and run it in live mode, then tap a player to attach quick notes or dictation while practice is active.</p>
                     </details>
 
                     <details>
                         <summary>Can I share drills with other coaches?</summary>
-                        <p>Currently, drills are stored in your personal library. Export/sharing features are on our roadmap. In the meantime, you can describe your drills to other coaches or take screenshots of the drill details and diagrams.</p>
+                        <p>Direct sharing is on the roadmap. Today, you can share drill details via screenshots and exported notes.</p>
                     </details>
 
                     <details>
                         <summary>How do I delete my data?</summary>
-                        <p>You can delete individual items (teams, seasons, drills, etc.) within the app. To delete all data, you can delete the app from your device. If you use iCloud sync, also go to Settings → your Apple ID → iCloud → Manage Storage → Touchline Studio to remove cloud data.</p>
+                        <p>Delete items in-app, uninstall the app to clear local data, and manage iCloud storage separately for synced data removal.</p>
                     </details>
 
                     <details>
                         <summary>Is there a Mac version?</summary>
-                        <p>Yes. Touchline Studio is available on Mac as well. Your data syncs seamlessly between iPhone, iPad, and Mac via iCloud.</p>
+                        <p>Yes. Touchline Studio runs on Mac and syncs via iCloud with your iPhone and iPad.</p>
                     </details>
                 </div>
+
+                <p class="faq-empty" id="support-faq-empty">No matching support FAQ found. Send us details through the email form above.</p>
             </div>
         </section>
     </main>
@@ -127,9 +215,9 @@
         <div class="container">
             <span>&copy; 2026 Umang Desai. All rights reserved.</span>
             <div>
-                <a href="index.html">Home</a>
-                <a href="privacy.html">Privacy</a>
-                <a href="mailto:touchlinestudio@umangdesai.com">Email</a>
+                <a href="index.html" data-track="footer_home">Home</a>
+                <a href="privacy.html" data-track="footer_privacy">Privacy</a>
+                <a href="mailto:touchlinestudio@umangdesai.com" data-track="footer_email">Email</a>
             </div>
         </div>
     </footer>

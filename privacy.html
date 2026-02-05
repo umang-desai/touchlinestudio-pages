@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Privacy Policy — Touchline Studio</title>
     <meta name="description" content="Touchline Studio privacy policy: no accounts, no tracking SDKs, and your coaching data stays on-device or in your private iCloud.">
-    <meta name="theme-color" content="#070b14">
+    <meta name="theme-color" content="#f4f8fc">
 
     <meta property="og:title" content="Privacy Policy — Touchline Studio">
     <meta property="og:description" content="No accounts, no tracking, and your coaching data stays on-device or in your private iCloud.">
@@ -18,27 +18,41 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;family=Space+Grotesk:wght@500;700&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/site.css">
+    <script defer src="assets/site.js"></script>
 </head>
 <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
     <header class="site-header">
         <div class="container">
             <a href="index.html" class="brand">
                 <img src="assets/icons/app-icon.png" alt="Touchline Studio app icon">
                 <span>Touchline Studio</span>
             </a>
-            <nav class="nav" aria-label="Primary">
-                <a href="index.html#screenshots">Screenshots</a>
-                <a href="index.html#features">Features</a>
-                <a href="privacy.html">Privacy</a>
-                <a href="support.html">Support</a>
-                <a class="cta-link" href="https://apps.apple.com/app/touchline-studio/id6740043775">Download</a>
+
+            <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="primary-nav">
+                <span class="sr-only">Toggle navigation menu</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M3 6h18"></path>
+                    <path d="M3 12h18"></path>
+                    <path d="M3 18h18"></path>
+                </svg>
+            </button>
+
+            <nav class="nav" id="primary-nav" aria-label="Primary">
+                <a href="index.html#screenshots" data-track="nav_screenshots">Screenshots</a>
+                <a href="index.html#features" data-track="nav_features">Features</a>
+                <a href="index.html#reviews" data-track="nav_reviews">Reviews</a>
+                <a href="privacy.html" data-track="nav_privacy">Privacy</a>
+                <a href="support.html" data-track="nav_support">Support</a>
+                <a class="cta-link" href="https://apps.apple.com/app/touchline-studio/id6757970508" data-track="nav_download">Download</a>
             </nav>
         </div>
     </header>
 
-    <main>
+    <main id="main-content">
         <section class="page-hero">
             <div class="container">
                 <h1>Privacy Policy</h1>
@@ -46,68 +60,48 @@
             </div>
         </section>
 
-        <section class="section" style="padding-top: 0;">
+        <section class="section section-tight">
             <div class="container">
                 <div class="content">
                     <h2>Overview</h2>
-                    <p>Touchline Studio ("the App") is designed with your privacy in mind. We believe your coaching data belongs to you, and we've built the app to minimize data collection while maximizing functionality.</p>
+                    <p>Touchline Studio ("the App") is designed with your privacy in mind. Your coaching data belongs to you, and the app is built to minimize data collection while keeping core features powerful.</p>
 
                     <h2>Data Storage</h2>
-                    <p><strong>Local Storage:</strong> All your data—teams, seasons, players, drills, sessions, and notes—is stored locally on your device. This data never leaves your device unless you enable iCloud sync.</p>
-                    <p><strong>iCloud Sync:</strong> If you enable iCloud sync, your data is stored in your private iCloud account using Apple's CloudKit framework. This data is:</p>
-                    <ul>
-                        <li>Encrypted in transit and at rest</li>
-                        <li>Accessible only by you through your Apple ID</li>
-                        <li>Not accessible to Touchline Studio or any third parties</li>
-                        <li>Subject to Apple's privacy policies</li>
-                    </ul>
+                    <p><strong>Local Storage:</strong> Teams, seasons, players, drills, sessions, and notes are stored locally on your device unless you enable iCloud sync.</p>
+                    <p><strong>iCloud Sync:</strong> If enabled, data is stored in your private iCloud account using CloudKit. This data is encrypted in transit and at rest, accessible by your Apple ID, and not accessible to Touchline Studio.</p>
 
                     <h2>Data We Collect</h2>
-                    <p><strong>We do not collect any personal data.</strong> The app operates entirely on your device and your private iCloud account. We have no servers, no user accounts, and no way to access your coaching data.</p>
+                    <p><strong>We do not collect personal data.</strong> There are no accounts and no app-owned servers for coaching data.</p>
 
                     <h2>AI Features</h2>
-                    <p>The AI Drill Creator feature uses OpenRouter to generate drill suggestions. When you use this feature:</p>
+                    <p>The AI Drill Creator uses OpenRouter only when you enable it.</p>
                     <ul>
-                        <li>Only the drill parameters you provide (goal, duration, intensity, etc.) are sent to the AI service</li>
-                        <li>No player names, personal information, or other coaching data is transmitted</li>
-                        <li>You provide your own API key, which is stored securely on your device</li>
-                        <li>AI requests are subject to OpenRouter's privacy policy</li>
+                        <li>Only drill parameters you enter are sent to the AI service</li>
+                        <li>No player names or personal coaching data are required</li>
+                        <li>Your API key is stored on your device</li>
+                        <li>Requests are governed by OpenRouter policies</li>
                     </ul>
-                    <p>The AI feature is entirely optional. The app is fully functional without it.</p>
 
                     <h2>Analytics &amp; Tracking</h2>
-                    <p>Touchline Studio does not include any analytics SDKs, tracking pixels, or third-party services that collect usage data. We do not track:</p>
-                    <ul>
-                        <li>How you use the app</li>
-                        <li>What features you access</li>
-                        <li>How long you spend in the app</li>
-                        <li>Any device identifiers</li>
-                    </ul>
+                    <p>Touchline Studio does not include analytics SDKs, tracking pixels, or third-party behavior tracking services.</p>
 
                     <h2>Third-Party Services</h2>
-                    <p>The app uses the following Apple services:</p>
                     <ul>
-                        <li><strong>iCloud (optional):</strong> For syncing data across your devices</li>
-                        <li><strong>Speech Recognition (optional):</strong> For voice-to-text note taking, processed on-device or via Apple's servers depending on your iOS version</li>
+                        <li><strong>iCloud (optional):</strong> Syncing across your Apple devices</li>
+                        <li><strong>Speech Recognition (optional):</strong> Voice-to-text note taking via Apple frameworks</li>
                     </ul>
 
                     <h2>Data Deletion</h2>
-                    <p>You can delete all your data at any time by:</p>
-                    <ul>
-                        <li>Deleting individual items within the app</li>
-                        <li>Deleting the app from your device (removes all local data)</li>
-                        <li>Managing your iCloud storage through iOS Settings (removes synced data)</li>
-                    </ul>
+                    <p>You can delete data any time by removing items in-app, deleting the app for local data removal, and managing iCloud storage for synced records.</p>
 
                     <h2>Children's Privacy</h2>
-                    <p>Touchline Studio is designed for coaches and does not knowingly collect information from children. Player information you enter (such as names and jersey numbers) is stored only on your device and your private iCloud account.</p>
+                    <p>Touchline Studio is built for coaches and does not knowingly collect information from children.</p>
 
                     <h2>Changes to This Policy</h2>
-                    <p>We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last updated" date.</p>
+                    <p>We may update this policy periodically. Changes are reflected on this page with an updated date.</p>
 
                     <h2>Contact Us</h2>
-                    <p>If you have any questions about this Privacy Policy, please contact us at:</p>
-                    <p><strong>Email:</strong> <a href="mailto:touchlinestudio@umangdesai.com">touchlinestudio@umangdesai.com</a></p>
+                    <p>Questions about privacy can be sent to <a href="mailto:touchlinestudio@umangdesai.com">touchlinestudio@umangdesai.com</a>.</p>
                 </div>
             </div>
         </section>
@@ -117,9 +111,9 @@
         <div class="container">
             <span>&copy; 2026 Umang Desai. All rights reserved.</span>
             <div>
-                <a href="index.html">Home</a>
-                <a href="support.html">Support</a>
-                <a href="mailto:touchlinestudio@umangdesai.com">Email</a>
+                <a href="index.html" data-track="footer_home">Home</a>
+                <a href="support.html" data-track="footer_support">Support</a>
+                <a href="mailto:touchlinestudio@umangdesai.com" data-track="footer_email">Email</a>
             </div>
         </div>
     </footer>

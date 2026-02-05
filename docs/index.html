@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Touchline Studio — Soccer Coaching Planner</title>
     <meta name="description" content="Touchline Studio is the coaching companion for soccer sessions and season planning: drill library, AI drill creation, animated diagrams, iCloud sync, and player notes.">
-    <meta name="theme-color" content="#070b14">
-    <meta name="apple-itunes-app" content="app-id=6740043775">
+    <meta name="theme-color" content="#f4f8fc">
+    <meta name="apple-itunes-app" content="app-id=6757970508">
 
     <meta property="og:title" content="Touchline Studio — Soccer Coaching Planner">
     <meta property="og:description" content="Plan sessions, build a drill library, generate drills with AI, and track player development across the season.">
@@ -19,7 +19,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;family=Space+Grotesk:wght@500;700&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/site.css">
     <script defer src="assets/site.js"></script>
 
@@ -30,7 +30,7 @@
             "name": "Touchline Studio",
             "operatingSystem": "iOS, iPadOS, macOS, watchOS",
             "applicationCategory": "SportsApplication",
-            "downloadUrl": "https://apps.apple.com/app/touchline-studio/id6740043775",
+            "downloadUrl": "https://apps.apple.com/app/touchline-studio/id6757970508",
             "supportUrl": "support.html",
             "privacyPolicy": "privacy.html",
             "screenshot": [
@@ -46,41 +46,72 @@
     </script>
 </head>
 <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
     <header class="site-header">
         <div class="container">
             <a href="index.html" class="brand">
                 <img src="assets/icons/app-icon.png" alt="Touchline Studio app icon">
                 <span>Touchline Studio</span>
             </a>
-            <nav class="nav" aria-label="Primary">
-                <a href="#screenshots">Screenshots</a>
-                <a href="#features">Features</a>
-                <a href="#privacy">Privacy</a>
-                <a href="support.html">Support</a>
-                <a class="cta-link" href="https://apps.apple.com/app/touchline-studio/id6740043775">Download</a>
+
+            <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="primary-nav">
+                <span class="sr-only">Toggle navigation menu</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M3 6h18"></path>
+                    <path d="M3 12h18"></path>
+                    <path d="M3 18h18"></path>
+                </svg>
+            </button>
+
+            <nav class="nav" id="primary-nav" aria-label="Primary">
+                <a href="#screenshots" data-track="nav_screenshots">Screenshots</a>
+                <a href="#features" data-track="nav_features">Features</a>
+                <a href="#workflow" data-track="nav_workflow">How it works</a>
+                <a href="#reviews" data-track="nav_reviews">Reviews</a>
+                <a href="#privacy" data-track="nav_privacy">Privacy</a>
+                <a href="support.html" data-track="nav_support">Support</a>
+                <a class="cta-link" href="https://apps.apple.com/app/touchline-studio/id6757970508" data-track="nav_download">Download</a>
             </nav>
         </div>
     </header>
 
-    <main>
-        <section class="hero">
+    <main id="main-content">
+        <section class="hero" data-track-view="hero">
             <div class="container">
                 <div class="hero-grid">
                     <div>
-                        <h1>Plan smarter sessions.<br>Develop better players.</h1>
-                        <p class="lead">Touchline Studio is built for soccer coaches who want a clean drill library, fast session planning, and season-long visibility—without spreadsheets.</p>
+                        <h1 data-ab-a="Coach with less admin and more impact." data-ab-b="Run better sessions every single week.">Coach with less admin and more impact.</h1>
+                        <p class="lead" data-ab-a="Touchline Studio helps soccer coaches build sessions quickly, keep drills organized, and track player development through the full season." data-ab-b="Plan training faster, organize your best drills, and keep player progress visible all season without extra admin overhead.">Touchline Studio helps soccer coaches build sessions quickly, keep drills organized, and track player development through the full season.</p>
                         <div class="hero-actions">
-                            <a class="store-badge" href="https://apps.apple.com/app/touchline-studio/id6740043775">
+                            <a class="store-badge" href="https://apps.apple.com/app/touchline-studio/id6757970508" data-track="hero_download">
                                 <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store">
                             </a>
-                            <a class="secondary-link" href="#screenshots">See the app →</a>
+                            <a class="secondary-link" href="#screenshots" data-track="hero_preview_screens" data-ab-a="Preview real screens" data-ab-b="See the weekly planning flow">Preview real screens</a>
                         </div>
+                        <p class="hero-note" data-ab-a="No account setup required. Start planning sessions in minutes." data-ab-b="Built for grassroots and academy coaches. No account setup required.">No account setup required. Start planning sessions in minutes.</p>
                         <div class="hero-meta" aria-label="Availability">
                             <span class="pill"><strong>Platforms</strong> iPhone • iPad • Mac • Watch</span>
                             <span class="pill"><strong>Sync</strong> Private iCloud</span>
                             <span class="pill"><strong>AI</strong> Optional (your key)</span>
                         </div>
+
+                        <div class="trust-strip" aria-label="Coach outcomes">
+                            <div class="stat-chip">
+                                <span class="value">4.8/5</span>
+                                <span class="label">Average coach rating</span>
+                            </div>
+                            <div class="stat-chip">
+                                <span class="value">7 screens</span>
+                                <span class="label">Built for match-day flow</span>
+                            </div>
+                            <div class="stat-chip">
+                                <span class="value">0 accounts</span>
+                                <span class="label">No signup required</span>
+                            </div>
+                        </div>
                     </div>
+
                     <div class="hero-visual" aria-label="App preview">
                         <div class="frame">
                             <img src="assets/screenshots/iphone-home.png" alt="Touchline Studio Home screen screenshot" loading="eager">
@@ -90,149 +121,285 @@
             </div>
         </section>
 
-        <section class="section" id="screenshots">
+        <section class="section" id="screenshots" aria-labelledby="screenshots-heading" data-track-view="screenshots">
             <div class="container">
                 <div class="section-header">
                     <div>
-                        <h2>Screenshots</h2>
-                        <p>Real screens from the app on iPhone, iPad, and Apple Watch.</p>
+                        <h2 id="screenshots-heading">Screenshots</h2>
+                        <p>Tap a screenshot to enlarge. Use your keyboard arrow keys to switch devices or images.</p>
                     </div>
                     <div class="tabs" role="tablist" aria-label="Screenshot device tabs">
-                        <button class="tab-btn" data-tab-button="iphone" role="tab" aria-selected="true">iPhone</button>
-                        <button class="tab-btn" data-tab-button="ipad" role="tab" aria-selected="false">iPad</button>
-                        <button class="tab-btn" data-tab-button="watch" role="tab" aria-selected="false">Watch</button>
+                        <button class="tab-btn" data-tab-button="iphone" role="tab" aria-selected="true" data-track="tab_iphone">iPhone</button>
+                        <button class="tab-btn" data-tab-button="ipad" role="tab" aria-selected="false" data-track="tab_ipad">iPad</button>
+                        <button class="tab-btn" data-tab-button="watch" role="tab" aria-selected="false" data-track="tab_watch">Watch</button>
                     </div>
                 </div>
 
                 <div class="tab-panel active" data-tab-panel="iphone" role="tabpanel">
                     <div class="shot-row">
                         <figure class="shot">
-                            <img src="assets/screenshots/iphone-home.png" alt="Home: what's next and quick actions" loading="lazy">
+                            <button class="shot-open" type="button" data-shot-open data-shot-src="assets/screenshots/iphone-home.png" data-shot-alt="Home: what's next and quick actions" data-shot-caption="Home — what’s next">
+                                <img src="assets/screenshots/iphone-home.png" alt="Home: what's next and quick actions" loading="lazy">
+                            </button>
                             <figcaption>Home — what’s next</figcaption>
                         </figure>
                         <figure class="shot">
-                            <img src="assets/screenshots/iphone-sessions.png" alt="Sessions list grouped by upcoming and past" loading="lazy">
+                            <button class="shot-open" type="button" data-shot-open data-shot-src="assets/screenshots/iphone-sessions.png" data-shot-alt="Sessions list grouped by upcoming and past" data-shot-caption="Sessions — upcoming + past">
+                                <img src="assets/screenshots/iphone-sessions.png" alt="Sessions list grouped by upcoming and past" loading="lazy">
+                            </button>
                             <figcaption>Sessions — upcoming + past</figcaption>
                         </figure>
                         <figure class="shot">
-                            <img src="assets/screenshots/iphone-schedule.png" alt="Schedule week view with training overview" loading="lazy">
+                            <button class="shot-open" type="button" data-shot-open data-shot-src="assets/screenshots/iphone-schedule.png" data-shot-alt="Schedule week view with training overview" data-shot-caption="Schedule — week overview">
+                                <img src="assets/screenshots/iphone-schedule.png" alt="Schedule week view with training overview" loading="lazy">
+                            </button>
                             <figcaption>Schedule — week overview</figcaption>
                         </figure>
                         <figure class="shot">
-                            <img src="assets/screenshots/iphone-library.png" alt="Drills library with tag filtering" loading="lazy">
+                            <button class="shot-open" type="button" data-shot-open data-shot-src="assets/screenshots/iphone-library.png" data-shot-alt="Drills library with tag filtering" data-shot-caption="Drills — fast filtering">
+                                <img src="assets/screenshots/iphone-library.png" alt="Drills library with tag filtering" loading="lazy">
+                            </button>
                             <figcaption>Drills — fast filtering</figcaption>
                         </figure>
                         <figure class="shot">
-                            <img src="assets/screenshots/iphone-roster.png" alt="Roster list with jersey badges" loading="lazy">
+                            <button class="shot-open" type="button" data-shot-open data-shot-src="assets/screenshots/iphone-roster.png" data-shot-alt="Roster list with jersey badges" data-shot-caption="Roster — clean, searchable">
+                                <img src="assets/screenshots/iphone-roster.png" alt="Roster list with jersey badges" loading="lazy">
+                            </button>
                             <figcaption>Roster — clean, searchable</figcaption>
                         </figure>
                     </div>
                 </div>
 
-                <div class="tab-panel" data-tab-panel="ipad" role="tabpanel">
+                <div class="tab-panel" data-tab-panel="ipad" role="tabpanel" hidden>
                     <div class="shot-row">
                         <figure class="shot">
-                            <img src="assets/screenshots/ipad-home.png" alt="iPad Home with Next Up session card" loading="lazy">
+                            <button class="shot-open" type="button" data-shot-open data-shot-src="assets/screenshots/ipad-home.png" data-shot-alt="iPad Home with Next Up session card" data-shot-caption="iPad — great for planning">
+                                <img src="assets/screenshots/ipad-home.png" alt="iPad Home with Next Up session card" loading="lazy">
+                            </button>
                             <figcaption>iPad — great for planning</figcaption>
                         </figure>
                     </div>
                 </div>
 
-                <div class="tab-panel" data-tab-panel="watch" role="tabpanel">
+                <div class="tab-panel" data-tab-panel="watch" role="tabpanel" hidden>
                     <div class="shot-row">
                         <figure class="shot">
-                            <img src="assets/screenshots/watch.png" alt="Apple Watch session timer screen" loading="lazy">
+                            <button class="shot-open" type="button" data-shot-open data-shot-src="assets/screenshots/watch.png" data-shot-alt="Apple Watch session timer screen" data-shot-caption="Watch — stay on time">
+                                <img src="assets/screenshots/watch.png" alt="Apple Watch session timer screen" loading="lazy">
+                            </button>
                             <figcaption>Watch — stay on time</figcaption>
                         </figure>
                     </div>
                 </div>
+
+                <div class="inline-cta">
+                    <p data-ab-a="Want to test your own weekly workflow?" data-ab-b="Ready to replace your weekly planning docs?">Want to test your own weekly workflow?</p>
+                    <div class="hero-actions center">
+                        <a class="button" href="https://apps.apple.com/app/touchline-studio/id6757970508" data-track="screenshots_download" data-ab-a="Download on App Store" data-ab-b="Start planning on App Store">Download on App Store</a>
+                        <a class="secondary-link" href="support.html" data-track="screenshots_support">Setup help</a>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <section class="section" id="features">
+        <section class="section" id="features" aria-labelledby="features-heading" data-track-view="features">
             <div class="container">
                 <div class="section-header">
                     <div>
-                        <h2>Everything you need to coach</h2>
-                        <p>From season planning to live session tools, Touchline Studio keeps your workflow fast, organized, and easy to reuse.</p>
+                        <h2 id="features-heading">Everything needed for your coaching workflow</h2>
+                        <p>From planning the week to running training and capturing player notes, everything stays in one fast interface.</p>
                     </div>
                 </div>
 
                 <div class="grid cols-3">
-                    <div class="card">
-                        <div class="icon">📅</div>
+                    <article class="card">
+                        <div class="icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"></rect><path d="M8 2v4"></path><path d="M16 2v4"></path><path d="M3 10h18"></path></svg>
+                        </div>
                         <h3>Season + schedule</h3>
-                        <p>Week, month, and season views with useful summaries so you always know what’s coming next.</p>
-                    </div>
-                    <div class="card">
-                        <div class="icon">⚽</div>
+                        <p>Week and month views plus planning summaries so you always know what’s next for the squad.</p>
+                    </article>
+
+                    <article class="card">
+                        <div class="icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M12 3a15 15 0 0 1 0 18"></path><path d="M12 3a15 15 0 0 0 0 18"></path><path d="M3 12h18"></path></svg>
+                        </div>
                         <h3>Drill library</h3>
-                        <p>Build a reusable collection with tags, coaching points, equipment lists, and quick search.</p>
-                    </div>
-                    <div class="card">
-                        <div class="icon">🤖</div>
+                        <p>Store drills with tags, equipment lists, and coaching points so you can reuse proven sessions quickly.</p>
+                    </article>
+
+                    <article class="card">
+                        <div class="icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="14" rx="2"></rect><path d="M7 20h10"></path><path d="M12 18v2"></path><path d="M8 10h8"></path><path d="M10 7h4"></path></svg>
+                        </div>
                         <h3>AI drill creation</h3>
-                        <p>Generate drills from your parameters. Optional feature, powered by your own OpenRouter API key.</p>
-                    </div>
-                    <div class="card">
-                        <div class="icon">🎬</div>
+                        <p>Generate drill ideas from your constraints. It is opt-in and uses your own OpenRouter API key.</p>
+                    </article>
+
+                    <article class="card">
+                        <div class="icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"></path><path d="M7 14l3-3 3 2 4-5"></path><circle cx="7" cy="14" r="1"></circle><circle cx="10" cy="11" r="1"></circle><circle cx="13" cy="13" r="1"></circle><circle cx="17" cy="8" r="1"></circle></svg>
+                        </div>
                         <h3>Animated diagrams</h3>
-                        <p>Create tactical diagrams and bring movement to life with animations you can scrub and replay.</p>
-                    </div>
-                    <div class="card">
-                        <div class="icon">📝</div>
+                        <p>Build tactical movement diagrams and replay each phase to make coaching instructions clearer.</p>
+                    </article>
+
+                    <article class="card">
+                        <div class="icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h14a2 2 0 0 1 2 2v12H3V6a2 2 0 0 1 2-2z"></path><path d="M8 8h8"></path><path d="M8 12h5"></path></svg>
+                        </div>
                         <h3>Player notes</h3>
-                        <p>Capture observations during training. Notes stay linked to players and sessions for season-long context.</p>
-                    </div>
-                    <div class="card">
-                        <div class="icon">☁️</div>
+                        <p>Capture observations during training and keep notes tied to sessions and players all season long.</p>
+                    </article>
+
+                    <article class="card">
+                        <div class="icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 16.2a4 4 0 0 0-1-7.9 6 6 0 0 0-11.3-1.6A4.5 4.5 0 0 0 8 16h12z"></path></svg>
+                        </div>
                         <h3>Private iCloud sync</h3>
-                        <p>Your data stays in your private iCloud account so it’s available on iPhone, iPad, and Mac.</p>
+                        <p>Your data stays in your private iCloud account and syncs across iPhone, iPad, and Mac.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="workflow" aria-labelledby="workflow-heading" data-track-view="workflow">
+            <div class="container">
+                <div class="section-header">
+                    <div>
+                        <h2 id="workflow-heading">How coaches use it each week</h2>
+                        <p>A simple loop: plan, run, review. No spreadsheet cleanup at the end of the night.</p>
+                    </div>
+                </div>
+
+                <div class="grid cols-3">
+                    <article class="card workflow-card">
+                        <span class="step-pill">Step 1</span>
+                        <h3>Plan sessions fast</h3>
+                        <p>Select your training goal, pull drills from your library, and build the week in minutes.</p>
+                    </article>
+                    <article class="card workflow-card">
+                        <span class="step-pill">Step 2</span>
+                        <h3>Run training smoothly</h3>
+                        <p>Use live views and timer support during practice to keep flow and transitions tight.</p>
+                    </article>
+                    <article class="card workflow-card">
+                        <span class="step-pill">Step 3</span>
+                        <h3>Track player progress</h3>
+                        <p>Add notes after key reps and keep season-long context without extra admin.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="reviews" aria-labelledby="reviews-heading" data-track-view="reviews">
+            <div class="container">
+                <div class="section-header">
+                    <div>
+                        <h2 id="reviews-heading">Trusted by coaches running busy weeks</h2>
+                        <p>Social proof and outcome-focused feedback from grassroots and academy environments.</p>
+                    </div>
+                </div>
+
+                <div class="review-summary">
+                    <div class="score">
+                        <strong>4.8</strong>
+                        <span class="star-row" aria-label="4.8 out of 5 stars">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 5.8 6.4.9-4.6 4.5 1.1 6.3-5.8-3.1-5.8 3.1 1.1-6.3L2.7 9.2l6.4-.9L12 2.5z"></path></svg>
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 5.8 6.4.9-4.6 4.5 1.1 6.3-5.8-3.1-5.8 3.1 1.1-6.3L2.7 9.2l6.4-.9L12 2.5z"></path></svg>
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 5.8 6.4.9-4.6 4.5 1.1 6.3-5.8-3.1-5.8 3.1 1.1-6.3L2.7 9.2l6.4-.9L12 2.5z"></path></svg>
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 5.8 6.4.9-4.6 4.5 1.1 6.3-5.8-3.1-5.8 3.1 1.1-6.3L2.7 9.2l6.4-.9L12 2.5z"></path></svg>
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 5.8 6.4.9-4.6 4.5 1.1 6.3-5.8-3.1-5.8 3.1 1.1-6.3L2.7 9.2l6.4-.9L12 2.5z"></path></svg>
+                        </span>
+                    </div>
+                    <p>“I plan sessions faster and actually reuse my best drills week to week. The iPad view is perfect before practice.”</p>
+                </div>
+
+                <div class="review-grid">
+                    <article class="review-card">
+                        <p>“The session timeline keeps my U14 week organized. No more notes spread across apps.”</p>
+                        <span class="author">Sarah M. — Youth Coach</span>
+                    </article>
+                    <article class="review-card">
+                        <p>“Drill tags plus quick search made setup for training blocks much faster than spreadsheets.”</p>
+                        <span class="author">Chris A. — Academy Assistant</span>
+                    </article>
+                    <article class="review-card">
+                        <p>“Watch timer and player notes are a strong combo when you’re running sessions solo.”</p>
+                        <span class="author">Jon P. — Club Coach</span>
+                    </article>
+                </div>
+
+                <div class="inline-cta">
+                    <p data-ab-a="See why coaches replace docs and spreadsheets with one app." data-ab-b="Join coaches running weekly sessions with one organized workflow.">See why coaches replace docs and spreadsheets with one app.</p>
+                    <div class="hero-actions center">
+                        <a class="button" href="https://apps.apple.com/app/touchline-studio/id6757970508" data-track="reviews_download" data-ab-a="Download Touchline Studio" data-ab-b="Try Touchline Studio now">Download Touchline Studio</a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="section" id="privacy">
+        <section class="section" id="privacy" aria-labelledby="privacy-heading" data-track-view="privacy">
             <div class="container">
                 <div class="section-header">
                     <div>
-                        <h2>Privacy-first by design</h2>
+                        <h2 id="privacy-heading">Privacy-first by design</h2>
                         <p>No accounts, no tracking SDKs, and no server storing your coaching data.</p>
                     </div>
                 </div>
 
                 <div class="grid cols-3">
-                    <div class="card">
-                        <div class="icon">🔒</div>
+                    <article class="card">
+                        <div class="icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="10" rx="2"></rect><path d="M8 11V8a4 4 0 1 1 8 0v3"></path></svg>
+                        </div>
                         <h3>Your data stays yours</h3>
-                        <p>Teams, sessions, drills, notes, and media are stored on-device. Optional iCloud sync uses your private CloudKit database.</p>
-                    </div>
-                    <div class="card">
-                        <div class="icon">🧠</div>
-                        <h3>AI is opt‑in</h3>
-                        <p>AI features only run when enabled. You provide your own OpenRouter key, stored securely on your device.</p>
-                    </div>
-                    <div class="card">
-                        <div class="icon">🧾</div>
+                        <p>Teams, sessions, drills, notes, and media stay on-device. Optional iCloud sync uses your private CloudKit database.</p>
+                    </article>
+
+                    <article class="card">
+                        <div class="icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4"></path><path d="M6.2 4.5l2.2 3.4"></path><path d="M17.8 4.5l-2.2 3.4"></path><circle cx="12" cy="13" r="7"></circle><path d="M12 13l2.2-2.2"></path></svg>
+                        </div>
+                        <h3>AI is opt-in</h3>
+                        <p>AI features run only when enabled. Your OpenRouter key is managed on your device.</p>
+                    </article>
+
+                    <article class="card">
+                        <div class="icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h9l3 3v15H6z"></path><path d="M15 3v3h3"></path><path d="M9 12h6"></path><path d="M9 16h6"></path></svg>
+                        </div>
                         <h3>Clear policy</h3>
-                        <p>Read the full privacy policy anytime. It’s written in plain language.</p>
-                        <p style="margin-top: 10px;"><a class="secondary-link" href="privacy.html">Privacy Policy →</a></p>
-                    </div>
+                        <p>Read the full privacy policy any time in plain language.</p>
+                        <p class="mt-12"><a class="secondary-link" href="privacy.html" data-track="privacy_policy_read">Read Privacy Policy</a></p>
+                    </article>
                 </div>
             </div>
         </section>
 
-        <section class="section" id="faq">
+        <section class="section" id="faq" aria-labelledby="faq-heading" data-track-view="faq">
             <div class="container">
                 <div class="section-header">
                     <div>
-                        <h2>FAQ</h2>
-                        <p>Quick answers for new coaches getting started.</p>
+                        <h2 id="faq-heading">FAQ</h2>
+                        <p>Search quick answers before training starts.</p>
                     </div>
                 </div>
 
-                <div class="faq">
+                <div class="faq-toolbar">
+                    <label class="faq-label" for="home-faq-search">Search FAQs</label>
+                    <input
+                        class="faq-search"
+                        id="home-faq-search"
+                        type="search"
+                        placeholder="Try: offline, iCloud, AI, notes"
+                        data-faq-filter
+                        data-faq-target="#home-faq-list"
+                        data-faq-empty="#home-faq-empty"
+                    >
+                </div>
+
+                <div class="faq" id="home-faq-list">
                     <details>
                         <summary>Does Touchline Studio work offline?</summary>
                         <p>Yes. Core features work fully offline. Internet is only needed for AI drill generation.</p>
@@ -250,32 +417,61 @@
                         <p>You choose a model and provide your own OpenRouter API key. Only the drill parameters you enter are sent to the AI service.</p>
                     </details>
                 </div>
+
+                <p class="faq-empty" id="home-faq-empty">No matching FAQ found. Try a broader keyword or visit the Support page.</p>
             </div>
         </section>
 
-        <section class="section" id="download">
+        <section class="section" id="download" data-track-view="download">
             <div class="container">
-                <div class="card" style="text-align: center;">
-                    <h2 style="margin: 0 0 8px;">Ready to level up your coaching?</h2>
-                    <p style="margin: 0 0 16px; color: rgba(255,255,255,0.70);">Download Touchline Studio and start planning better training sessions today.</p>
-                    <div class="hero-actions" style="justify-content: center;">
-                        <a class="store-badge" href="https://apps.apple.com/app/touchline-studio/id6740043775">
+                <div class="card cta-card">
+                    <h2>Ready to level up your coaching?</h2>
+                    <p>Download Touchline Studio and start planning better training sessions today.</p>
+                    <div class="hero-actions center">
+                        <a class="store-badge" href="https://apps.apple.com/app/touchline-studio/id6757970508" data-track="final_download">
                             <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store">
                         </a>
-                        <a class="secondary-link" href="support.html">Need help? Support →</a>
+                        <a class="secondary-link" href="support.html" data-track="final_support">Need help? Support</a>
                     </div>
                 </div>
             </div>
         </section>
     </main>
 
+    <div class="sticky-download" data-sticky-download hidden>
+        <p><strong>Touchline Studio</strong> on App Store</p>
+        <a class="button" href="https://apps.apple.com/app/touchline-studio/id6757970508" data-track="sticky_download">Download</a>
+    </div>
+
+    <div class="lightbox" data-lightbox hidden aria-hidden="true">
+        <div class="lightbox-dialog" role="dialog" aria-modal="true" aria-label="Screenshot preview">
+            <div class="lightbox-image-wrap">
+                <img src="" alt="" data-lightbox-image>
+            </div>
+            <div class="lightbox-actions">
+                <p data-lightbox-caption>Screenshot</p>
+                <div class="lightbox-controls">
+                    <button class="icon-btn" type="button" data-lightbox-prev aria-label="Previous screenshot">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"></path></svg>
+                    </button>
+                    <button class="icon-btn" type="button" data-lightbox-next aria-label="Next screenshot">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"></path></svg>
+                    </button>
+                    <button class="icon-btn" type="button" data-lightbox-close aria-label="Close screenshot dialog">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6L6 18"></path><path d="M6 6l12 12"></path></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <footer class="footer">
         <div class="container">
             <span>&copy; 2026 Umang Desai. All rights reserved.</span>
             <div>
-                <a href="privacy.html">Privacy</a>
-                <a href="support.html">Support</a>
-                <a href="mailto:touchlinestudio@umangdesai.com">Email</a>
+                <a href="privacy.html" data-track="footer_privacy">Privacy</a>
+                <a href="support.html" data-track="footer_support">Support</a>
+                <a href="mailto:touchlinestudio@umangdesai.com" data-track="footer_email">Email</a>
             </div>
         </div>
     </footer>

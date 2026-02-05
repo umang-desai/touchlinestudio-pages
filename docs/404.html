@@ -5,38 +5,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Page Not Found — Touchline Studio</title>
     <meta name="robots" content="noindex">
-    <meta name="theme-color" content="#070b14">
+    <meta name="theme-color" content="#f4f8fc">
     <link rel="icon" href="assets/icons/app-icon.png" type="image/png">
     <link rel="apple-touch-icon" href="assets/icons/app-icon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;family=Space+Grotesk:wght@500;700&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/site.css">
+    <script defer src="assets/site.js"></script>
 </head>
 <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
     <header class="site-header">
         <div class="container">
             <a href="index.html" class="brand">
                 <img src="assets/icons/app-icon.png" alt="Touchline Studio app icon">
                 <span>Touchline Studio</span>
             </a>
-            <nav class="nav" aria-label="Primary">
-                <a href="index.html#screenshots">Screenshots</a>
-                <a href="index.html#features">Features</a>
-                <a href="privacy.html">Privacy</a>
-                <a href="support.html">Support</a>
-                <a class="cta-link" href="https://apps.apple.com/app/touchline-studio/id6740043775">Download</a>
+
+            <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="primary-nav">
+                <span class="sr-only">Toggle navigation menu</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M3 6h18"></path>
+                    <path d="M3 12h18"></path>
+                    <path d="M3 18h18"></path>
+                </svg>
+            </button>
+
+            <nav class="nav" id="primary-nav" aria-label="Primary">
+                <a href="index.html#screenshots" data-track="nav_screenshots">Screenshots</a>
+                <a href="index.html#features" data-track="nav_features">Features</a>
+                <a href="index.html#reviews" data-track="nav_reviews">Reviews</a>
+                <a href="privacy.html" data-track="nav_privacy">Privacy</a>
+                <a href="support.html" data-track="nav_support">Support</a>
+                <a class="cta-link" href="https://apps.apple.com/app/touchline-studio/id6757970508" data-track="nav_download">Download</a>
             </nav>
         </div>
     </header>
 
-    <main>
+    <main id="main-content">
         <section class="hero">
             <div class="container">
-                <div class="card" style="text-align: center;">
-                    <h1 style="margin: 0 0 8px;">404</h1>
-                    <p style="margin: 0 0 16px; color: rgba(255,255,255,0.70);">That page doesn’t exist. Head back to the homepage.</p>
-                    <a class="button" href="index.html">Go to homepage</a>
+                <div class="card cta-card">
+                    <h1>404</h1>
+                    <p>This page does not exist. Head back to the homepage.</p>
+                    <a class="button" href="index.html" data-track="error404_home">Go to homepage</a>
                 </div>
             </div>
         </section>
@@ -46,9 +60,9 @@
         <div class="container">
             <span>&copy; 2026 Umang Desai. All rights reserved.</span>
             <div>
-                <a href="privacy.html">Privacy</a>
-                <a href="support.html">Support</a>
-                <a href="mailto:touchlinestudio@umangdesai.com">Email</a>
+                <a href="privacy.html" data-track="footer_privacy">Privacy</a>
+                <a href="support.html" data-track="footer_support">Support</a>
+                <a href="mailto:touchlinestudio@umangdesai.com" data-track="footer_email">Email</a>
             </div>
         </div>
     </footer>
